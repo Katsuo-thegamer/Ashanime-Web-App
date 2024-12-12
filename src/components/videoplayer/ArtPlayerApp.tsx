@@ -40,7 +40,7 @@ const ArtPlayer = (props: props) => {
     setLoading(true);
     await axios
       .get(
-        `https://ashanime-api.vercel.app/meta/anilist/watch/${streamEpisode.id}`,
+        `https://anime-kun32.vercel.app/meta/anilist/watch/${streamEpisode.id}`,
         {
           params: {
             ...(provider && { provider }),
@@ -78,14 +78,7 @@ const ArtPlayer = (props: props) => {
     };
   }, []);
 
-  // const handleVideoLink = (quality: string) => {
-  //   episodeObject.sources.forEach((source: any) => {
-  //     if (source.quality === quality) {
-  //       dispatch(setVideoLink(source.url));
-  //       return source.url;
-  //     }
-  //   });
-  // };
+ 
 
   const handleSubtitles = () => {
     if (episodeObject.subtitles) {
